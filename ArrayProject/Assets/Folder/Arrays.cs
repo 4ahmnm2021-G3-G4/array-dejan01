@@ -16,6 +16,10 @@ public class Arrays : MonoBehaviour
         {
             Debug.Log("Array1 is" + array1);
         }
+        foreach(float array2 in array2)
+        {
+            Debug.Log("Array2 is" + array2);
+        }
     }
 
     
