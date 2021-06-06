@@ -1,6 +1,4 @@
-﻿using System.Drawing;
-using System.Net.Mime;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,9 +9,8 @@ public class Arrays : MonoBehaviour
     float[] array2 = new float[] {0.1f, 4.2f, 7.2f, 1.1f};
     //added one number in order to show the difference in lenght between array1 (=a1), a2 and a3
     int[] array3 = {1, 2, 3, 4, 5};
-    GameObject[] array4 = new GameObject[4];
 
-    // Durlaufen der ARRAYS und Debug Message in Console
+    // 1) Durlaufen der ARRAYS und Debug Message in Console
     void Start()
     {
         foreach(string array1 in array1)
@@ -29,18 +26,19 @@ public class Arrays : MonoBehaviour
             Debug.Log("Array3 is " + array3);
         }
 
-        //array length
+        //2) array length
 
         Debug.Log("Array1 Length is " + array1.Length);
         Debug.Log("Array2 Length is " + array2.Length);
         Debug.Log("Array3 Length is " + array3.Length);
 
-        //wert ändern
+        //3) wert ändern
         array3[4] = 100;
         array1[0] = "Sejm Prositscha äs last jia";
 
-        array4 = GameObject.FindGameObjectsWithTag("RedImage");
-        array4[0].GetComponent<Image>().color = Color.red;
+        //4) RedImagesg
+        GameObject[] redImages = GameObject.FindGameObjectsWithTag("RedImage");
+        redImages[2].GetComponent<Image>().color = Color.red;
 
     }
 
